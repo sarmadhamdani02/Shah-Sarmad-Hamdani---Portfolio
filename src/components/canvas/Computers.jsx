@@ -7,9 +7,25 @@ import CanvasLoader from "../Loader";
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
+  // Rotation state
+  const [rotationX, setRotationX] = useState(0);
+
+  // Update rotation
+  useEffect(() => {
+    const updateRotation = () => {
+      setRotationX((rotationX) => rotationX + 0.01); // Adjust rotation speed as needed
+    };
+
+    const frameId = requestAnimationFrame(updateRotation);
+
+    return () => {
+      cancelAnimationFrame(frameId);
+    };
+  }, []);
+
   return (
-    <mesh>
-      <hemisphereLight intensity={1} groundColor="black" />
+    <mesh position={[-1, -1.2, -1.5]} scale={isMobile ? 0.9 : 1.2} rotation={[rotationX, 0, 0]}>
+      <hemisphereLight intensity={1} groundColor="black" color={"#915eff"} />
       <spotLight
         position={[-20, 50, 10]}
         angle={0.12}
@@ -18,14 +34,10 @@ const Computers = ({ isMobile }) => {
         castShadow
         shadow-mapSize={1024}
         decay={0}
+        color={"#915eff"}
       />
       <pointLight intensity={5} />
-      <primitive
-        object={computer.scene}
-        scale={isMobile ? 0.6 : 0.75}
-        position={isMobile ? [0, -3, -2] : [0, -3.25, -1.5]}
-        rotation={[-0.01, 0.1, -0.1]}
-      />
+      <primitive object={computer.scene} />
     </mesh>
   );
 };
@@ -50,22 +62,11 @@ const ComputersCanvas = () => {
   }, []);
 
   return (
-    <Canvas
-      frameloop="demand"
-      shadows
-      dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
-    >
+    <Canvas frameloop="demand" shadows dpr={[1, 2]} camera={{ position: [3, 5, 5], fov: 30 }}>
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
+        <OrbitControls enableZoom={false} maxPolarAngle={Math.PI /2} minPolarAngle={Math.PI / 2.1} minAzimuthAngle={-Math.PI / 18} maxAzimuthAngle={Math.PI / 3} />
         <Computers isMobile={isMobile} />
       </Suspense>
-
       <Preload all />
     </Canvas>
   );

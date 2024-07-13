@@ -108,10 +108,7 @@ import {
       name: "figma",
       icon: figma,
     },
-    {
-      name: "docker",
-      icon: docker,
-    },
+  
   ];
   
   const experiences = [
@@ -198,16 +195,16 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "Blogistan - Blog App",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "Web-based platform that allows users to view, upload, update and delete blog posts. The app uses Appwrite as backend",
       tags: [
         {
           name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "appwrite",
           color: "green-text-gradient",
         },
         {
@@ -216,49 +213,95 @@ import {
         },
       ],
       image: carrent,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/sarmadhamdani02/Blogistan-BlogApp",
     },
     {
-      name: "Job IT",
+      name: "WebGames",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "An open source web-based project, containing classing games, I added 4 games initially and people can contribute to it.",
       tags: [
         {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "restapi",
-          color: "green-text-gradient",
-        },
-        {
-          name: "scss",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: jobit,
-      source_code_link: "https://github.com/",
-    },
-    {
-      name: "Trip Guide",
-      description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-      tags: [
-        {
-          name: "nextjs",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "supabase",
-          color: "green-text-gradient",
+          name: "html",
+          color: "orange-text-gradient",
         },
         {
           name: "css",
-          color: "pink-text-gradient",
+          color: "blue-text-gradient",
         },
+        {
+          name: "javascript",
+          color: "yellow-text-gradient",
+        },
+        
+      ],
+      image: jobit,
+      source_code_link: "https://github.com/sarmadhamdani02/WebGames",
+    },
+    {
+      name: "PHP CRUD App",
+      description:
+        "A PHP-based full-stack web-based project, which allows users to perform CRUD Operation",
+      tags: [
+        {
+          name: "html",
+          color: "orange-text-gradient",
+        },
+        {
+          name: "css",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "php",
+          color: "php-text-gradient",
+        },
+        
       ],
       image: tripguide,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/sarmadhamdani02/php-crud-app",
+    },
+    {
+      name: "Hangman Game",
+      description:
+        "A simple looking yet complex to develop classic Hangman game with awesome visuals and UI.",
+      tags: [
+        {
+          name: "html",
+          color: "orange-text-gradient",
+        },
+        {
+          name: "reactjs",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "javascript",
+          color: "yellow-text-gradient",
+        },
+        {
+          name: "typescript",
+          color: "blue-text-gradient",
+        },
+        
+      ],
+      image: tripguide,
+      source_code_link: "https://github.com/sarmadhamdani02/php-crud-app",
+    },
+    {
+      name: "Try Catch Error Snippet",
+      description:
+        "A VS Code made to make developer's life easier when handling errors in the projects.",
+      tags: [
+        {
+          name: "nodejs",
+          color: "green-text-gradient",
+        },
+        {
+          name: "javascript",
+          color: "yellow-text-gradient",
+        },
+        
+      ],
+      image: tripguide,
+      source_code_link: "https://github.com/sarmadhamdani02/try-catch-error-snippet",
     },
   ];
   

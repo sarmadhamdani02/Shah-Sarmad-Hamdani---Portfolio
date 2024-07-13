@@ -1,49 +1,50 @@
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
+import ComputersCanvas from "./canvas/Computers"; // Assuming corrected import
 
 const Hero = () => {
-  return (
-    <section className={`relative w-full h-screen mx-auto`}>
-      <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
-      >
-        <div className="flex flex-col justify-center items-center mt-5">
-          <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
-          <div className="w-1 sm:h-80 h-40 violet-gradient" />
-        </div>
+  const [scrollY, setScrollY] = useState(0);
+  const [maxScrollY, setMaxScrollY] = useState(0);
 
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <br /> <span className="text-[#915EFF]">Sarmad</span>
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    const parentHeight = document.querySelector("#scroll-parent").offsetHeight;
+    setMaxScrollY(parentHeight - 200); // Adjust for any padding or margin
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return (
+    <section className="relative w-full h-screen mx-auto bg-[url('public/hero_bg.jpg')] bg-cover bg-no-repeat bg-center">
+      <div className="h-full  w-full absolute inset-0 bg-[#11111170]" />
+      <div id="scroll-parent" className="absolute inset-0 mt-24 max-w-7xl mx-auto flex sm:flex-row flex-col items-start gap-5  ">
+        <div className="sm:h-full sm:w-1/2 h-[40%]">
+          <h1 className={`${styles.heroHeadText} text-white pl-10 mt-10`}>
+            Hi, I'm <br />
+            <span className="text-[#915EFF] ">
+              Shah
+              <span> Sarmad</span>
+              <br />
+              <span className="ml-10">Hamdani</span>
+            </span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop 3D visuals, user <br className="sm:block hidden" />
-            interfaces and web applications
+          <p className={`${styles.heroSubText} mt-2 text-white-100 pl-10`}>
+            I craft engaging animations, dynamic user interfaces, and full-stack web applications.
           </p>
         </div>
+
+        <div className="sm:w-1/2 h-[60%] w-full sm:h-full flex items-center justify-start sm:justify-center">
+          <ComputersCanvas />
+        </div>
       </div>
 
-      <ComputersCanvas />
-
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-        <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-            <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
-            />
-          </div>
-        </a>
-      </div>
+      {/* Optionally, add your animated link to scroll down */}
     </section>
   );
 };
