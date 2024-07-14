@@ -4,7 +4,7 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
-const Earth = () => {
+const Earth = ({ isMobile }) => {
   const earth = useGLTF("./planet/scene.gltf");
 
   return (
@@ -28,6 +28,7 @@ const EarthCanvas = () => {
         position: [0, 5, 0], // Top-down view
         rotation: [-Math.PI / 0, 0, 0] // Rotate camera to look down
       }}
+
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls

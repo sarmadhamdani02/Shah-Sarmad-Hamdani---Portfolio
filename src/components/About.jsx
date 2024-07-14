@@ -7,27 +7,28 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { BorderBeam } from "../../@/components/magicui/border-beam"; // Ensure correct import path
 import ShineBorder from "./magicui/shine-border";
+import { CodeXml, Braces, TabletSmartphone } from 'lucide-react'; // Import icons here
 
-const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className="xs:w-[250px] w-[250px]">
-    <motion.div variants={fadeIn("right", "spring", index * 0.5, 0.75)}>
-      <ShineBorder
-        className="relative h-[280px] w-full rounded-[20px] bg-purple-950  py-5 px-12 flex justify-evenly items-center flex-col "
-        color={"#915EFF"}
-      >
-        <BorderBeam />
-        <img
-          src={icon}
-          alt="web-development"
-          className="w-16 h-16 object-contain"
-        />
-        <h3 className="text-white text-[20px] font-bold text-center">
-          {title}
-        </h3>
-      </ShineBorder>
-    </motion.div>
-  </Tilt>
-);
+const icons = { CodeXml, Braces, TabletSmartphone }; // Map icon names to components
+
+const ServiceCard = ({ index, title, icon, color }) => {
+  const IconComponent = icons[icon];
+  return (
+    <Tilt className="xs:w-[250px] w-[250px]">
+      <motion.div variants={fadeIn("right", "spring", index * 0.5, 0.75)}>
+        <ShineBorder
+          className="relative h-[280px] w-full rounded-[20px] bg-purple-950  py-5 px-12 flex justify-evenly items-center flex-col "
+          color={"#915EFF"}
+        >
+          <IconComponent size={48} color={color} />
+          <h3 className="text-white text-[20px] font-bold text-center">
+            {title}
+          </h3>
+        </ShineBorder>
+      </motion.div>
+    </Tilt>
+  );
+};
 
 const About = () => {
   return (
@@ -37,13 +38,9 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
-      {/* <div className="relative h-[200px] w-[200px] rounded-xl">
-        <BorderBeam />
-      </div> */}
-
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className="mt-4 text-secondary text-space-mono text-[17px] max-w-3xl leading-[30px]"
       >
         I'm a skilled software developer fluent in{" "}
         <span className="text-purple-500 font-bold">TypeScript</span> and{" "}
