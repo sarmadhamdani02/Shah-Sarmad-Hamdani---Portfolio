@@ -4,6 +4,7 @@ import { styles } from "../styles";
 import ComputersCanvas from "./canvas/Computers"; // Assuming corrected import
 import BlurIn from "../../@/components/magicui/blur-in";
 import Particles from "../../@/components/magicui/particles";
+import BoxReveal from "../components/magicui/BoxReveal";
 
 const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -31,7 +32,7 @@ const Hero = () => {
 
   return (
     <section className="hero relative w-full h-screen mx-auto  bg-cover bg-no-repeat bg-center">
-        <Particles
+      <Particles
         className="absolute inset-0 bg-[#1a112e]"
         quantity={1000}
         ease={80}
@@ -39,18 +40,19 @@ const Hero = () => {
         color={"#fff"}
         refresh
       />
-      <div className="h-full  w-full absolute inset-0 bg-[#11111170]" />
+
       <div
         id="scroll-parent"
         className="absolute inset-0 mt-24 max-w-7xl mx-auto flex sm:flex-row flex-col items-start gap-5  "
       >
         <div className="sm:h-full sm:w-1/2 h-[40%]">
           <h1 className={`${styles.heroHeadText} text-white pl-10 mt-10`}>
-            Hi, I'm <br />
+            Hi I'm
             <span className="text-[#915EFF] glow">
               <BlurIn word={"Shah Sarmad Hamdani"}></BlurIn>
             </span>
           </h1>
+
           <p className={`${styles.heroSubText} mt-2 text-white-100 pl-10`}>
             I craft engaging animations, dynamic user interfaces, and full-stack
             web applications.

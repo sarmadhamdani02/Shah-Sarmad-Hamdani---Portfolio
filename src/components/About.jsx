@@ -15,7 +15,7 @@ const ServiceCard = ({ index, title, icon }) => (
         className="relative h-[280px] w-full rounded-[20px] bg-purple-950  py-5 px-12 flex justify-evenly items-center flex-col "
         color={"#915EFF"}
       >
-        <BorderBeam/>
+        <BorderBeam />
         <img
           src={icon}
           alt="web-development"

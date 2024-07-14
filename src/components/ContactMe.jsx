@@ -17,7 +17,7 @@ const ContactMe = () => {
   return (
     <div className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
       <span className="pointer-events-none whitespace-pre-wrap bg-transparent bg-clip-text text-center text-8xl font-semibold leading-none dark:from-white dark:to-black text-stroke-purple opacity-50">
-        Contact me.
+        find me at.
       </span>
 
       {/* Inner Circles */}

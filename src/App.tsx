@@ -46,7 +46,7 @@ const App = () => {
 
           <Hero />
         </div>
-        <div>
+        <div className=" bg-gradient-to-b from-[#1a112e] to-[#121212]">
           <About />
         </div>
         {/* <Cool/> */}
