@@ -64,11 +64,11 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="change-theme hidden sm:flex">
+        {/* <div className="change-theme hidden sm:flex">
           <button className=" border border-gray-500 px-2 py-2 hover:bg-[#915EFF] hover:text-[#1D1836] transition rounded-full">
             Change Theme
           </button>
-        </div>
+        </div> */}
 
         <div className=" sm:hidden flex flex-1 justify-end items-center">
           <img

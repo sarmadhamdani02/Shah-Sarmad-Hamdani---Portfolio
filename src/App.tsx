@@ -36,7 +36,8 @@ const App = () => {
           'select',
           'textarea',
           'button',
-          '.link'
+          '.link',
+          "Github"
         ]}
       />
       <div className='relative z-0 bg-primary '>

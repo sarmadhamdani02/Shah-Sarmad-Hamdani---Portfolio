@@ -31,6 +31,7 @@ const ProjectCard = ({
           speed: 450,
         }}
         className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full '
+        id="Work"
       >
         <div className='relative w-full h-[230px]'>
           <img
