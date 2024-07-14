@@ -16,7 +16,7 @@ import { Linkedin, Mail, Github, Phone } from "lucide-react";
 const ContactMe = () => {
   return (
     <div className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
-      <span className="pointer-events-none whitespace-pre-wrap bg-transparent bg-clip-text text-center text-8xl font-semibold leading-none dark:from-white dark:to-black text-stroke-purple opacity-50">
+      <span className="pointer-events-none whitespace-pre-wrap bg-transparent bg-clip-text text-center text-8xl font-semibold leading-none dark:from-white dark:to-black text-stroke-purple opacity-50 select-none">
         find me at.
       </span>
 
@@ -62,8 +62,7 @@ const ContactMe = () => {
 
 const copyToClipboard = (text) => {
   navigator.clipboard.writeText(text).then(
-    () => {
-    },
+    () => {},
     (err) => {
       alert("Something went wrong, please try later.");
     }
@@ -72,29 +71,27 @@ const copyToClipboard = (text) => {
 
 const Icons = {
   gitHub: () => (
-    <button
-      onClick={() => {
-        copyToClipboard("https://github.com/sarmadhamdani02");
-        alert("Github Link copied Successfully");
-      }}
-    >
-      <Github />
+    <button>
+      <a href="https://github.com/sarmadhamdani02" target="_blank">
+        <Github />
+      </a>
     </button>
   ),
   linkedin: () => (
-    <button
-      onClick={() => {
-        copyToClipboard("https://www.linkedin.com/in/shah-sarmad-hamdani/");
-        alert("LinkedIn Link copied Successfully");
-      }}
-    >
-      <Linkedin color="#0965c2" />
+    <button>
+      <a
+        href="https://www.linkedin.com/in/shah-sarmad-hamdani/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Linkedin color="#0965c2" />
+      </a>
     </button>
   ),
   gmail: () => (
     <button
       onClick={() => {
-        copyToClipboard("sarmadfarooqhamdani.com");
+        copyToClipboard("sarmadfarooqhamdani@gmail.com");
         alert("Email copied Successfully");
       }}
     >
