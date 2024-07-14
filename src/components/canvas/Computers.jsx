@@ -64,7 +64,7 @@ const ComputersCanvas = () => {
   return (
     <Canvas frameloop="demand" shadows dpr={[1, 2]} camera={{ position: [3, 5, 5], fov: 30 }}>
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} maxPolarAngle={Math.PI /2} minPolarAngle={Math.PI / 2.1} minAzimuthAngle={-Math.PI / 18} maxAzimuthAngle={Math.PI / 3} />
+        <OrbitControls enableZoom={false}  maxPolarAngle={Math.PI /2} minPolarAngle={Math.PI / 2.1} minAzimuthAngle={isMobile ? Math.PI /18 :  - Math.PI /18} maxAzimuthAngle={Math.PI /3 } />
         <Computers isMobile={isMobile} />
       </Suspense>
       <Preload all />
