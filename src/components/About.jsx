@@ -1,36 +1,30 @@
 import React from "react";
-import {Tilt} from "react-tilt";
+import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
-
 import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+import { BorderBeam } from "../../@/components/magicui/border-beam"; // Ensure correct import path
+import ShineBorder from "./magicui/shine-border";
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-[250px] '>
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full green-pink-gradient  p-[1px] rounded-[20px] shadow-card'
-    >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-[#1b1b27] rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+  <Tilt className="xs:w-[250px] w-[250px]">
+    <motion.div variants={fadeIn("right", "spring", index * 0.5, 0.75)}>
+      <ShineBorder
+        className="relative h-[280px] w-full rounded-[20px] bg-purple-950  py-5 px-12 flex justify-evenly items-center flex-col "
+        color={"#915EFF"}
       >
+        <BorderBeam/>
         <img
           src={icon}
-          alt='web-development'
-          className='w-16 h-16 object-contain'
+          alt="web-development"
+          className="w-16 h-16 object-contain"
         />
-
-        <h3 className='text-white text-[20px] font-bold text-center'>
+        <h3 className="text-white text-[20px] font-bold text-center">
           {title}
         </h3>
-      </div>
+      </ShineBorder>
     </motion.div>
   </Tilt>
 );
@@ -43,14 +37,29 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
+      {/* <div className="relative h-[200px] w-[200px] rounded-xl">
+        <BorderBeam />
+      </div> */}
+
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I'm a skilled software developer fluent in TypeScript and JavaScript, specializing in frameworks like React, Node.js, and Three.js for both frontend and backend development. I enjoy creating efficient, scalable, and user-friendly solutions by closely collaborating with clients. Let's work together to bring your ideas to life!
+        I'm a skilled software developer fluent in{" "}
+        <span className="text-purple-500 font-bold">TypeScript</span> and{" "}
+        <span className="text-purple-500 font-bold">JavaScript</span>,
+        specializing in frameworks like{" "}
+        <span className="text-purple-500 font-bold">React</span>,{" "}
+        <span className="text-purple-500 font-bold">Node.js</span>, and{" "}
+        <span className="text-purple-500 font-bold">Three.js</span> for both{" "}
+        <span className="text-green-500 font-bold">frontend</span> and{" "}
+        <span className="text-green-500 font-bold">backend</span> development. I
+        enjoy creating efficient, scalable, and user-friendly solutions by
+        closely collaborating with clients. Let's work together to bring your
+        ideas to life!
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <div className="mt-20 flex flex-wrap gap-20 items-center justify-center">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

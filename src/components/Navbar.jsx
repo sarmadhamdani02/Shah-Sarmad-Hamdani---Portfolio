@@ -5,6 +5,10 @@ import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
 import { motion } from 'framer-motion';
+// import { BorderBeam } from "../../@/components/magicui/border-beam"; // 
+import ShineBorder from "./magicui/shine-border";
+
+
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -22,7 +26,9 @@ const Navbar = () => {
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center py-5 top-0 fixed z-20 bg-primary`}
+      
     >
+
       <div className={`w-full flex justify-between items-center max-w-7xl mx-auto py-2 px-6 rounded-full ${navbar ? "backdrop-filter backdrop-blur-sm bg-[#23163f7b] transitoin border border-[#915eff2f]" : ""}`}>
         <Link
           to="/"
