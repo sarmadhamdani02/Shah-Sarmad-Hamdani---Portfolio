@@ -19,6 +19,11 @@ body{
   overflow-x: hidden;
 }
 
+p::selection, span::selection, h2::selection{
+  color: #fff;
+  background-color: #915EFF;
+}
+
 .text-space-mono{
   font-family: "Space Mono", monospace;
   font-weight: 400;
