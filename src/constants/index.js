@@ -211,7 +211,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: {carrent},
+    video: './portfolio_videos/Blog-App Post - Made with Clipchamp.mp4',
     source_code_link: "https://github.com/sarmadhamdani02/Blogistan-BlogApp",
   },
   {
@@ -233,7 +233,7 @@ const projects = [
       },
       
     ],
-    image: {jobit},
+    video: './portfolio_videos/WEB GAMES - Made with Clipchamp.mp4',
     source_code_link: "https://github.com/sarmadhamdani02/WebGames",
   },
   {
@@ -253,9 +253,13 @@ const projects = [
         name: "php",
         color: "php-text-gradient",
       },
+      {
+        name: "tailwind",
+        color: "blue-text-gradient",
+      },
       
     ],
-    image: {tripguide},
+    video: './portfolio_videos/Untitled video - Made with Clipchamp.mp4',
     source_code_link: "https://github.com/sarmadhamdani02/php-crud-app",
   },
   {
@@ -281,7 +285,7 @@ const projects = [
       },
       
     ],
-    image: tripguide,
+    video: './portfolio_videos/linkedinPost_hangman.mp4',
     source_code_link: "https://github.com/sarmadhamdani02/php-crud-app",
   },
   {
@@ -299,7 +303,7 @@ const projects = [
       },
       
     ],
-    image: {tripguide},
+    video: './portfolio_videos/1719164627946.mp4',
     source_code_link: "https://github.com/sarmadhamdani02/try-catch-error-snippet",
   },
 ];

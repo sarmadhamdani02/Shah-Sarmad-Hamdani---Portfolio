@@ -193,3 +193,8 @@ p::selection, span::selection, h2::selection{
   color: transparent;
 }
 
+.gradient-border {
+  border: 3px solid;
+  border-image-slice: 1;
+  border-image-source:  ;
+}
