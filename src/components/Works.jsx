@@ -28,7 +28,7 @@ const ProjectCard = ({
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="max-w-sm items-center justify-center text-center"
+      className="max-w-sm items-center justify-center text-center relative"
       onClick={() => handleClick(source_code_link)}
     >
       <Tilt
@@ -40,9 +40,9 @@ const ProjectCard = ({
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
         id="Work"
       >
-        <div className="relative w-full h-[230px] rounded-2xl overflow-hidden">
+        <div className="relative w-full h-[230px] rounded-2xl overflow-hidden gradient-border flex items-center justify-center">
           <motion.video
-            className="absolute top-0 left-0 w-full h-full object-cover rounded-3xl gradient-border"
+            className="absolute  w-[98%] h-[98%] object-cover rounded-2xl"
             autoPlay
             loop
             muted

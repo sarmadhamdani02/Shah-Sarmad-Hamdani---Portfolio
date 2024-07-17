@@ -194,7 +194,34 @@ p::selection, span::selection, h2::selection{
 }
 
 .gradient-border {
-  border: 3px solid;
-  border-image-slice: 1;
-  border-image-source:  ;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px; 
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  border-radius: inherit;
+  border: 8px solid transparent;
+  background: linear-gradient(45deg, #9962ff, #00FFF1);
+  background-size: 400%;
+  z-index: -1;
+  animation: gradient-border 1s ease infinite;
+}
+
+@keyframes gradient-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

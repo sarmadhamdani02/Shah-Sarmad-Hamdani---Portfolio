@@ -204,11 +204,11 @@ const projects = [
       },
       {
         name: "appwrite",
-        color: "green-text-gradient",
+        color: "pink-text-gradient",
       },
       {
         name: "tailwind",
-        color: "pink-text-gradient",
+        color: "blue-text-gradient",
       },
     ],
     video: './portfolio_videos/Blog-App Post - Made with Clipchamp.mp4',
