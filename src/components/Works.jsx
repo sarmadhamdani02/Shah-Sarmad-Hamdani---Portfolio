@@ -90,16 +90,16 @@ const Works = () => {
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] text-space-mono"
         >
           The following projects highlight my{" "}
-          <span class="text-green-500 font-bold">skills</span> and{" "}
-          <span class="text-green-500 font-bold">experience</span> through real-world
+          <span className="text-green-500 font-bold">skills</span> and{" "}
+          <span className="text-green-500 font-bold">experience</span> through real-world
           examples of my work. Each project is accompanied by a brief
           description, along with links to code repositories and live demos font-bold.
           These examples showcase my ability to{" "}
-          <span class="text-purple-500 font-bold">solve complex problems</span>,
+          <span className="text-purple-500 font-bold">solve complex problems</span>,
           work with{" "}
-          <span class="text-purple-500 font-bold">various technologies</span>,
+          <span className="text-purple-500 font-bold">various technologies</span>,
           and{" "}
-          <span class="text-purple-500 font-bold">
+          <span className="text-purple-500 font-bold">
             manage projects effectively
           </span>
           .

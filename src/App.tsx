@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas, ParticlesComponent, ContactMe } from "./components";
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas, ContactMe } from "./components";
 import AnimatedCursor from "react-animated-cursor"
 // import { BorderBeam } from "../@/components/magicui/border-beam"
 // import ShineBorder  from "../@/components/magicui/shine-border"
