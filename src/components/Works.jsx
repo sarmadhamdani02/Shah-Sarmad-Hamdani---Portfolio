@@ -50,6 +50,7 @@ const ProjectCard = ({
             whileHover={{ scale: 1.1 }}
           >
             <source src={video} type="video/mp4" />
+            <p>Loading video</p>
           </motion.video>
 
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">

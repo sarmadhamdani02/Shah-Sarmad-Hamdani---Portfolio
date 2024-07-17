@@ -60,7 +60,7 @@ const App = () => {
     // Simulating delay for demonstration
     setTimeout(() => {
       setLoading(false);
-    }, 5000); // Simulated loading time
+    }, 8000); // Simulated loading time
 
     // Display random loading message every 3 seconds
     const interval = setInterval(() => {
@@ -72,12 +72,6 @@ const App = () => {
     return () => clearInterval(interval);
   }, []); // Run once on component mount
 
-  useEffect(() => {
-    // Ensure loader is hidden once entire website content has loaded
-    window.onload = () => {
-      setLoading(false);
-    };
-  }, []);
 
   return (
     <div>
