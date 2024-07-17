@@ -8,7 +8,8 @@ import AnimatedCursor from "react-animated-cursor"
 const App = () => {
   return (
     <BrowserRouter>
-      <AnimatedCursor
+     <div className=" hidden sm:flex">
+     <AnimatedCursor
         innerSize={8}
         innerStyle={{
           backgroundColor: "#9962ff",
@@ -40,6 +41,7 @@ const App = () => {
           "Github"
         ]}
       />
+     </div>
       <div className='relative z-0 bg-primary '>
         <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
           <Navbar />
