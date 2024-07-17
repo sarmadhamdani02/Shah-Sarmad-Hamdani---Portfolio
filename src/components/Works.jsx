@@ -109,8 +109,7 @@ const Works = () => {
           <span className="text-green-500 font-bold">skills</span> and{" "}
           <span className="text-green-500 font-bold">experience</span> through
           real-world examples of my work. Each project is accompanied by a brief
-          description, along with links to code repositories and live demos
-          font-bold. These examples showcase my ability to{" "}
+          description, along with links to code repositories and live demos. These examples showcase my ability to{" "}
           <span className="text-purple-500 font-bold">
             solve complex problems
           </span>
