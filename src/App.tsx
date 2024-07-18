@@ -20,7 +20,6 @@ const override: CSSProperties = {
 
 const loadingMessages = [
   "Upgrading Windows, your PC will restart several times. Sit back and relax.",
-  "Would you prefer chicken, steak, or tofu?",
   "(Pay no attention to the man behind the curtain)",
   "just testing your patience :)",
   "As if you had any other choice",
@@ -36,8 +35,7 @@ const loadingMessages = [
   "How did you get here?",
   "Wait, do you smell something burning?",
   "When nothing is going right, go left!!...",
-  "Kindly hold on as we convert this bug to a feature...",
-  "Loading funny message...",
+  "Kindly hold on as I convert this bug to a feature...",
   "Loading to make it look something heavier...",
   "Patience! This is difficult, you know...",
   "Discovering new ways of making you wait...",
@@ -122,6 +120,7 @@ const App = () => {
               ]}
             />
           </div>
+
           <div className="relative z-0 bg-primary">
             <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
               <Navbar />
