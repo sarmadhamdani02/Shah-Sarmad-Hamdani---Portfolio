@@ -225,3 +225,35 @@ p::selection, span::selection, h2::selection{
     background-position: 0% 50%;
   }
 }
+
+/* Define scrollbar track */
+::-webkit-scrollbar {
+  width: 10px; /* width of the scrollbar */
+  background-color: #333; /* darker background */
+}
+
+/* Define scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #915eff; /* thumb color */
+  border-radius: 30px; /* rounder edges */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #915eff #333; /* thumb color and track color */
+}
+
+/* For Edge and IE */
+* {
+  -ms-overflow-style: none; /* hide the default scrollbar */
+}
+*::-webkit-scrollbar {
+  display: none; /* hide the default scrollbar for WebKit browsers (optional) */
+}
+
+
+
+.animate-orbit:hover {
+  animation-play-state: paused;
+}

@@ -22,7 +22,7 @@ const loadingMessages = [
   "Upgrading Windows, your PC will restart several times. Sit back and relax.",
   "Would you prefer chicken, steak, or tofu?",
   "(Pay no attention to the man behind the curtain)",
-  "We're testing your patience",
+  "just testing your patience :)",
   "As if you had any other choice",
   "keep calm and npm install",
   "The bits are flowing slowly today",
@@ -66,7 +66,7 @@ const App = () => {
     const interval = setInterval(() => {
       const randomIndex = Math.floor(Math.random() * loadingMessages.length);
       setCurrentMessage(loadingMessages[randomIndex]);
-    }, 3000);
+    }, 4000);
 
     // Clear interval on component unmount
     return () => clearInterval(interval);

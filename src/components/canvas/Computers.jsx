@@ -24,7 +24,7 @@ const Computers = ({ isMobile }) => {
   }, []);
 
   return (
-    <mesh position={[-1, -1.2, -1.5]} scale={isMobile ? 0.9 : 1.2} rotation={[rotationX, 0, 0]}>
+    <mesh position={[-1, -1.2, -1.5]} scale={isMobile ? 0.5 : 1.2} rotation={[rotationX, 0, 0]}>
       <hemisphereLight intensity={1} groundColor="black" color={"#915eff"} />
       <spotLight
         position={[-20, 50, 10]}
