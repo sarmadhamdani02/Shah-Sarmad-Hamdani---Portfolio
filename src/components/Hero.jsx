@@ -85,6 +85,7 @@ const Hero = () => {
         <div className="sm:w-1/2 h-[60%] w-full sm:h-full flex items-center justify-start sm:justify-center">
           <ComputersCanvas />
         </div>
+        
       </div>
     </section>
   );

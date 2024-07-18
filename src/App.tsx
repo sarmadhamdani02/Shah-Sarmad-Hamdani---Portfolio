@@ -72,7 +72,7 @@ const App = () => {
 
 
   return (
-    <div>
+    <div className=" overflow-y-hidden">
       {loading ? (
         <div className="h-screen w-screen flex flex-col gap-10 items-center justify-center bg-[#1a112e]">
           <HashLoader
